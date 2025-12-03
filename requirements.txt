@@ -3,4 +3,4 @@ streamlit
 gaussian_kde
 pandas
 numpy
-scipy
+scipy.stats
