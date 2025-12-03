@@ -96,7 +96,7 @@ try:
     df = load_data('data/sunspots.csv')
 
     # 사이드바에 파라미터 조절 슬라이더 추가
-    # '''코드를 작성하시오'''
+    st.sidebar.title('시각화 파라미터 조절')
     
     # 연도 범위 선택
     year_range = st.sidebar.slider(
@@ -162,4 +162,5 @@ try:
 
 except Exception as e:
     st.error(f"오류가 발생했습니다: {e}")
+
     st.info("데이터 파일의 구조를 확인해주세요. 'data/sunspots.csv' 파일이 존재하고 'YEAR'와 'SUNACTIVITY' 컬럼이 있어야 합니다.")
