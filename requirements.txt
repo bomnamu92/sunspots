@@ -1,2 +1,5 @@
 matplotlib
 streamlit
+gaussian_kde
+pandas
+numpy
