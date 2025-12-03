@@ -85,23 +85,25 @@ def plot_advanced_sunspot_visualizations(df, sunactivity_col='SUNACTIVITY',
     return fig
 
 # 메인 앱
-st.title('🌞 태양흑점 데이터 분석 대시보드 🌞')
+st.title('🌞태양흑점 데이터 분석 대시보드🌞')
 st.markdown("""
     이 대시보드는 태양흑점 데이터를 다양한 시각화 방법으로 보여줍니다.
     """)
 
 try:
     # 데이터 로드
+    # df = load_data('data/sunspots.csv')
     df = load_data('data/sunspots.csv')
 
     # 사이드바에 파라미터 조절 슬라이더 추가
-    '''코드를 작성하시오'''
+    # '''코드를 작성하시오'''
     
     # 연도 범위 선택
-    year_range = st.sidebar(
+    year_range = st.sidebar.slider(
         '연도 범위 선택',
         min_value=1700,
         max_value=2008,
+        value=(1900,2000),
         step=1
     )
 
@@ -143,7 +145,7 @@ try:
 
     # 필터링된 데이터
     filtered_df = df[(df['YEAR'] >= year_range[0]) & (df['YEAR'] <= year_range[1])]
-
+    # filtered_df = df
     # 시각화
     if not filtered_df.empty:
         st.subheader('태양흑점 데이터 종합 시각화')
