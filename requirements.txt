@@ -1,6 +1,5 @@
-matplotlib
 streamlit
-gaussian_kde
 pandas
 numpy
-scipy==1.9.3
+matplotlib
+scipy
