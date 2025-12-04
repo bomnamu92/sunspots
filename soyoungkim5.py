@@ -57,10 +57,11 @@ st.subheader("📈 Prophet Forecast Plot")
 # TODO: model.plot()을 사용하여 예측 결과를 시각화하세요.
 # '''코드를 작성하시오'''
 fig1 = model.plot(forecast)
-fig1.set_title("Prophet Forecast Plot")
-fig1.set_xlabel("Year")
-fig1.set_ylabel("Sun Activity")
-# plt.show()
+ax = fig1.gca()  # 첫 번째 axes 가져오기
+
+ax.set_title("Prophet Forecast Plot")
+ax.set_xlabel("Year")
+ax.set_ylabel("Sun Activity")
 st.pyplot(fig1)
 
 # plt.title("Prophet Forecast Plot")
