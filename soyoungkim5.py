@@ -126,4 +126,3 @@ st.subheader("📌 Residual Summary Statistics")
 # TODO: merged["residual"].describe()를 출력하세요.
 # '''코드를 작성하시오'''
 st.write(merged["residual"].describe())
-st.write(merged["ds"].describe())
