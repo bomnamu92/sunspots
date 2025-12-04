@@ -60,21 +60,17 @@ fig1 = model.plot(forecast)
 ax = fig1.gca()  # 첫 번째 axes 가져오기
 
 ax.set_title("Prophet Forecast Plot")
-ax.set_xlabel("Year")
-ax.set_ylabel("Sun Activity")
+ax.set_xlabel("y")
+ax.set_ylabel("ds")
 st.pyplot(fig1)
-
-# plt.title("Prophet Forecast Plot")
-# plt.xlabel("Year")
-# plt.ylabel("Sun Activity")
-# plt.show()
 
 st.subheader("📊 Forecast Components")
 # TODO: model.plot_components()를 사용하여 구성요소를 시각화하세요.
 # '''코드를 작성하시오'''
 fig2 = model.plot_components(forecast)
-plt.suptitle("Forecast Components", fontsize=16)
-plt.show()
+# ax2 = fig2.gca()
+# ax2.set
+st.pyplot(fig2)
 
 # ----------------------------------
 # [5] 커스텀 시각화: 실제값 vs 예측값 + 신뢰구간
