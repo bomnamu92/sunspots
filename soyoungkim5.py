@@ -57,10 +57,16 @@ st.subheader("📈 Prophet Forecast Plot")
 # TODO: model.plot()을 사용하여 예측 결과를 시각화하세요.
 # '''코드를 작성하시오'''
 fig1 = model.plot(forecast)
-plt.title("Prophet Forecast Plot")
-plt.xlabel("Year")
-plt.ylabel("Sun Activity")
-plt.show()
+fig1.set_title("Prophet Forecast Plot")
+fig1.set_xlabel("Year")
+fig1.set_ylabel("Sun Activity")
+# plt.show()
+st.pyplot(fig1)
+
+# plt.title("Prophet Forecast Plot")
+# plt.xlabel("Year")
+# plt.ylabel("Sun Activity")
+# plt.show()
 
 st.subheader("📊 Forecast Components")
 # TODO: model.plot_components()를 사용하여 구성요소를 시각화하세요.
