@@ -60,8 +60,8 @@ fig1 = model.plot(forecast)
 ax = fig1.gca()  # 첫 번째 axes 가져오기
 
 ax.set_title("Prophet Forecast Plot")
-ax.set_xlabel("y")
-ax.set_ylabel("ds")
+ax.set_xlabel("ds")
+ax.set_ylabel("y")
 st.pyplot(fig1)
 
 st.subheader("📊 Forecast Components")
