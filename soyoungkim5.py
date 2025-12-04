@@ -68,8 +68,6 @@ st.subheader("📊 Forecast Components")
 # TODO: model.plot_components()를 사용하여 구성요소를 시각화하세요.
 # '''코드를 작성하시오'''
 fig2 = model.plot_components(forecast)
-# ax2 = fig2.gca()
-# ax2.set
 st.pyplot(fig2)
 
 # ----------------------------------
@@ -86,7 +84,7 @@ ax.plot(forecast["ds"], forecast["yhat"], color="red", linestyle="--", label="Pr
 ax.fill_between(forecast["ds"], forecast["yhat_lower"], forecast["yhat_upper"], color="red", alpha=0.1, label="Prediction Interval")
 ax.set_title("Sunspots: Actual vs. Predicted with Prediction Intervals")
 ax.set_xlabel("Year")
-ax.set_ylabel("Sun Activity")
+ax.set_ylabel("Sunspot Activity")
 ax.legend()
 ax.grid(True)
 
@@ -128,3 +126,4 @@ st.subheader("📌 Residual Summary Statistics")
 # TODO: merged["residual"].describe()를 출력하세요.
 # '''코드를 작성하시오'''
 st.write(merged["residual"].describe())
+st.write(merged["ds"].describe())
